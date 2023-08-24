@@ -7,23 +7,19 @@ import styles from "./mobileNavBar.module.scss";
 const MobileNavBar = () => {
   return (
     <nav className={styles["mobile-nav"]}>
-      <Link legacyBehavior href={"/"}>
-        <a className={styles["nav-link"]}>
-          <FontAwesomeIcon
-            icon={faHome}
-            className={styles["nav-icon"]}
-            style={{ color: "black" }}
-          />
-        </a>
+      <Link href={"/"} className={styles["nav-link"]}>
+        <FontAwesomeIcon
+          icon={faHome}
+          className={styles["nav-icon"]}
+          style={{ color: "black" }}
+        />
       </Link>
-      <Link legacyBehavior href={"/"}>
-        <a className={styles["nav-link"]}>
-          <FontAwesomeIcon
-            icon={faHeart}
-            className={styles["nav-icon"]}
-            style={{ color: "black" }}
-          />
-        </a>
+      <Link href={"/"} className={styles["nav-link"]}>
+        <FontAwesomeIcon
+          icon={faHeart}
+          className={styles["nav-icon"]}
+          style={{ color: "black" }}
+        />
       </Link>
     </nav>
   );

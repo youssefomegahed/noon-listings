@@ -9,14 +9,8 @@ import {
   faHeartCircleCheck,
   faHouseCircleCheck,
 } from "@fortawesome/free-solid-svg-icons";
-// import {
-//   faImage as faHomeRegular,
-//   faHeart as faHeartRegular,
-// } from "@fortawesome/free-regular-svg-icons"; // faHome in this package is not free, so I used a placeholder
-const DesktopNavBar = () => {
-  const [liked, setLiked] = React.useState(false);
 
- 
+const DesktopNavBar = ({likedSelected, setLikedSelected}) => {
 
   return (
     <nav className={styles["desktop-nav"]}>
@@ -28,12 +22,11 @@ const DesktopNavBar = () => {
           href={"/"}
           className={styles["nav-link"]}
           onClick={() => {
-            console.log("Home clicked");
-            setLiked(false);
+            setLikedSelected(false);
           }}
         >
           <FontAwesomeIcon
-            icon={liked ? faHome : faHouseCircleCheck}
+            icon={likedSelected ? faHome : faHouseCircleCheck}
             style={{ color: "black", marginRight: "5px", fontSize: "1.1rem" }}
           />
           <span className={styles["nav-link-text"]}>Home</span>
@@ -42,12 +35,11 @@ const DesktopNavBar = () => {
           href={"/"}
           className={styles["nav-link"]}
           onClick={() => {
-            console.log("Liked clicked");
-            setLiked(true);
+            setLikedSelected(true);
           }}
         >
           <FontAwesomeIcon
-            icon={liked ? faHeartCircleCheck : faHeart}
+            icon={likedSelected ? faHeartCircleCheck : faHeart}
             style={{ color: "black", marginRight: "5px", fontSize: "1.1rem" }}
           />
           <span className={styles["nav-link-text"]}>Liked</span>

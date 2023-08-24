@@ -1,24 +1,38 @@
 import React from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faHeart } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHome,
+  faHeart,
+  faHeartCircleCheck,
+  faHouseCircleCheck,
+} from "@fortawesome/free-solid-svg-icons";
 import styles from "./mobileNavBar.module.scss";
 
-const MobileNavBar = () => {
+const MobileNavBar = ({ likedSelected, setLikedSelected }) => {
   return (
     <nav className={styles["mobile-nav"]}>
-      <Link href={"/"} className={styles["nav-link"]}>
+      <Link
+        href={"/"}
+        className={styles["nav-link"]}
+        onClick={() => {
+          setLikedSelected(false);
+        }}
+      >
         <FontAwesomeIcon
-          icon={faHome}
+          icon={likedSelected ? faHome : faHouseCircleCheck}
           className={styles["nav-icon"]}
           style={{ color: "black" }}
         />
       </Link>
       <Link href={"/"} className={styles["nav-link"]}>
         <FontAwesomeIcon
-          icon={faHeart}
+          icon={likedSelected ? faHeartCircleCheck : faHeart}
           className={styles["nav-icon"]}
           style={{ color: "black" }}
+          onClick={() => {
+            setLikedSelected(true);
+          }}
         />
       </Link>
     </nav>

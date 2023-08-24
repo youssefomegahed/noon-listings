@@ -1,12 +1,14 @@
 "use client";
 
+import React from "react";
 import MobileNavBar from "./components/NavBars/MobileNavBar/MobileNavBar";
+import DesktopNavBar from "./components/NavBars/DesktopNavBar/DesktopNavBar";
 
 export default function Home() {
   return (
     <div>
-      <h1>Home</h1>
-      <MobileNavBar />
+      <DesktopNavBar />
+      {/* <MobileNavBar /> */}
     </div>
   );
 }

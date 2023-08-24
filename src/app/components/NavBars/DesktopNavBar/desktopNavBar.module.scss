@@ -1,0 +1,28 @@
+.desktop-nav {
+  background-color: #feee00;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between; // To separate logo and links
+  align-items: center;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+  padding: 5px 10px;
+}
+
+.nav-link-text {
+  font-size: 16x;
+}

@@ -1,0 +1,79 @@
+.listing-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: white;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Full width on smaller screens */
+  max-width: 600px;
+  margin: 0 auto; /* Center the listing item horizontally */
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.username {
+  font-weight: bold;
+  color: black;
+}
+
+.listing-image {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.title-container {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  margin-left: 5px;
+}
+
+.listing-title {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  flex: 1;
+  margin-right: 5px;
+}
+
+.listing-details {
+  display: flex;
+  font-size: 14px;
+  margin-top: 10px;
+  flex-direction: column;
+  margin-left: 5px;
+}
+
+.price {
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.like-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.comments {
+  color: black;
+}
+
+.likes {
+  color: black;
+}

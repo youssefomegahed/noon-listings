@@ -12,6 +12,7 @@ const ListingItem = ({
   title,
   price,
   numLikes,
+  description,
   numComments,
   liked,
   onLikeClick,
@@ -72,6 +73,7 @@ const ListingItem = ({
           </button>{" "}
           {"  " + numLikes + " likes"}
         </span>
+        <span className={styles["description"]}>{description}</span>
         <span className={styles["comments"]}>View {numComments} comments</span>
       </div>
     </div>

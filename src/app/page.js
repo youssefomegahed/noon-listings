@@ -1,15 +1,45 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import MobileNavBar from "./components/NavBars/MobileNavBar/MobileNavBar";
 import DesktopNavBar from "./components/NavBars/DesktopNavBar/DesktopNavBar";
-import ListingItem from "./components/ListingItem/ListingItem";
+import Listings from "./components/Listings/Listings";
 
 export default function Home() {
   const [width, setWidth] = React.useState(window.screen.width);
   const [isMobile, setIsMobile] = React.useState(false);
   const [likedSelected, setLikedSelected] = React.useState(false);
+
+  const data = [
+    {
+      id: 0,
+      username: "youssefmegahed",
+      profilePicture:
+        "https://st3.depositphotos.com/1017228/18878/i/450/depositphotos_188781580-stock-photo-handsome-cheerful-young-man-standing.jpg",
+      image:
+        "https://images.pexels.com/photos/9558940/pexels-photo-9558940.jpeg?cs=srgb&dl=pexels-mart-production-9558940.jpg&fm=jpg",
+      title: "iPhone 11 Cover",
+      price: 100,
+      numLikes: 43,
+      description: "This is a description",
+      numComments: 11,
+      liked: false,
+    },
+    {
+      id: 1,
+      username: "youssefmegahed",
+      profilePicture:
+        "https://st3.depositphotos.com/1017228/18878/i/450/depositphotos_188781580-stock-photo-handsome-cheerful-young-man-standing.jpg",
+      image:
+        "https://images.pexels.com/photos/9558940/pexels-photo-9558940.jpeg?cs=srgb&dl=pexels-mart-production-9558940.jpg&fm=jpg",
+      title: "iPhone 11 Cover",
+      price: 100,
+      numLikes: 43,
+      description: "This is a description",
+      numComments: 11,
+      liked: false,
+    },
+  ];
 
   // every time the width changes, check if it is mobile or not
   React.useEffect(() => {
@@ -50,28 +80,11 @@ export default function Home() {
       {/* Page Content */}
       <div
         style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          marginTop: "20px",
+          height: "calc(100vh - 60px)", // 60px is the height of the nav bar
+          overflow: "auto", // Enable scrolling when needed
         }}
       >
-        <ListingItem
-          key={0}
-          username={"youssefmegahed"}
-          profilePicture={
-            "https://st3.depositphotos.com/1017228/18878/i/450/depositphotos_188781580-stock-photo-handsome-cheerful-young-man-standing.jpg"
-          }
-          image={
-            "https://images.pexels.com/photos/9558940/pexels-photo-9558940.jpeg?cs=srgb&dl=pexels-mart-production-9558940.jpg&fm=jpg"
-          }
-          title={"iPhone 11 Cover"}
-          price={100}
-          numLikes={43}
-          numComments={11}
-          liked={false}
-          onLikeClick={() => console.log("like clicked")}
-        />
+        <Listings data={data} />
       </div>
     </div>
   );

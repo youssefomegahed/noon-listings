@@ -11,7 +11,7 @@ export default function Home() {
   const [isMobile, setIsMobile] = React.useState(false);
   const [likedSelected, setLikedSelected] = React.useState(false);
   const [data, setData] = React.useState([]);
-  const [likedListings, setLikedListings] = React.useState([]);
+  const [likedListingsIDs, setLikedListingsIDs] = React.useState([]);
 
   // every time the width changes, check if it is mobile or not
   React.useEffect(() => {
@@ -34,15 +34,13 @@ export default function Home() {
   }, []);
 
   React.useEffect(() => {
-    let tmpLikedListings = localStorage.getItem("likedListings") || [];
+    let tmpLikedListingsIDs = localStorage.getItem("likedListings") || [];
 
-    if (tmpLikedListings.length > 0) {
-      tmpLikedListings = JSON.parse(tmpLikedListings);
+    if (tmpLikedListingsIDs.length > 0) {
+      tmpLikedListingsIDs = JSON.parse(tmpLikedListingsIDs);
     }
 
-
-
-    setLikedListings(tmpLikedListings);
+    setLikedListingsIDs(tmpLikedListingsIDs);
   }, []);
 
   return (
@@ -72,7 +70,16 @@ export default function Home() {
           overflow: "auto", // Enable scrolling when needed
         }}
       >
-        <Listings data={data} setLikedListings={setLikedListings} likedListings={likedListings} />
+        {/* Listings */}
+        <Listings
+          data={
+            likedSelected
+              ? data.filter((item) => likedListingsIDs.includes(item.id))
+              : data
+          }
+          setLikedListingsIDs={setLikedListingsIDs}
+          likedListingsIDs={likedListingsIDs}
+        />
       </div>
     </div>
   );

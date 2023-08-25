@@ -25,6 +25,7 @@
 .username {
   color: #82ae04;
   margin-bottom: 3px;
+  font-weight: 600;
 }
 
 .listing-image {
@@ -83,5 +84,10 @@
 
 .description {
   color: black;
-  padding: 10px 0;
+  padding: 5px 0;
+}
+
+.tags {
+  color: #82ae04;
+  padding-bottom: 5px;
 }

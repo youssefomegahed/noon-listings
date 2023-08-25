@@ -2,24 +2,27 @@ import React from "react";
 import styles from "./listings.module.scss";
 import ListingItem from "../ListingItem/ListingItem";
 
-const Listings = ({ data, setLikedListings, likedListings }) => {
+const Listings = ({ data, setLikedListingsIDs, likedListingsIDs }) => {
   const handleLikeClick = (id) => {
-    let tmpLikedListings = localStorage.getItem("likedListings") || [];
+    let tmpLikedListingsIDs = localStorage.getItem("likedListings") || [];
 
-    if (tmpLikedListings.length > 0) {
-      tmpLikedListings = JSON.parse(tmpLikedListings);
+    if (tmpLikedListingsIDs.length > 0) {
+      tmpLikedListingsIDs = JSON.parse(tmpLikedListingsIDs);
     }
-    if (tmpLikedListings.includes(id)) {
-      tmpLikedListings = tmpLikedListings.filter((item) => item !== id);
+    if (tmpLikedListingsIDs.includes(id)) {
+      tmpLikedListingsIDs = tmpLikedListingsIDs.filter((item) => item !== id);
     } else {
-      tmpLikedListings.push(id);
+      tmpLikedListingsIDs.push(id);
     }
-    localStorage.setItem("likedListings", JSON.stringify(tmpLikedListings));
-    setLikedListings(tmpLikedListings);
+    localStorage.setItem("likedListings", JSON.stringify(tmpLikedListingsIDs));
+    setLikedListingsIDs(tmpLikedListingsIDs);
   };
 
   return (
     <div className={styles.listingsContainer}>
+      {data.length === 0 && (
+        <h1 className={styles.noListingsText}>No Listings to Show</h1>
+      )}
       {data.map((item) => (
         <ListingItem
           key={item.id}
@@ -29,11 +32,14 @@ const Listings = ({ data, setLikedListings, likedListings }) => {
           title={item.title}
           price={item.price}
           numLikes={
-            likedListings.includes(item.id) ? item.numLikes + 1 : item.numLikes
+            likedListingsIDs.includes(item.id)
+              ? item.numLikes + 1
+              : item.numLikes
           }
           description={item.description}
+          tags={item.tags}
           numComments={item.numComments}
-          liked={likedListings.includes(item.id)}
+          liked={likedListingsIDs.includes(item.id)}
           onLikeClick={() => handleLikeClick(item.id)}
         />
       ))}

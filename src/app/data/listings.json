@@ -8,6 +8,7 @@
     "price": 30,
     "numLikes": 43,
     "description": "Protect your valuable iPhone 13 Pro in style with our premium quality iPhone 13 Pro Cover.",
+    "tags": ["#iPhoneCover", "#PhoneAccessories", "#ProtectiveCase"],
     "numComments": 11,
     "liked": false
   },
@@ -20,6 +21,7 @@
     "price": 65,
     "numLikes": 87,
     "description": "High-quality wireless earbuds for immersive sound experience.",
+    "tags": ["#WirelessEarbuds", "#AudioGadgets", "#SoundExperience"],
     "numComments": 23,
     "liked": false
   },
@@ -32,6 +34,7 @@
     "price": 15,
     "numLikes": 25,
     "description": "A stylish and sturdy stand for your smartphone.",
+    "tags": ["#SmartphoneStand", "#DeviceHolder", "#HandsFree"],
     "numComments": 7,
     "liked": true
   },
@@ -44,6 +47,7 @@
     "price": 50,
     "numLikes": 67,
     "description": "Experience high-quality sound on the go with this portable speaker.",
+    "tags": ["#BluetoothSpeaker", "#PortableAudio", "#SoundOnTheGo"],
     "numComments": 15,
     "liked": false
   },
@@ -56,6 +60,7 @@
     "price": 45,
     "numLikes": 35,
     "description": "A stylish leather wallet with multiple card slots and compartments.",
+    "tags": ["#LeatherWallet", "#FashionAccessories", "#CardSlots"],
     "numComments": 8,
     "liked": true
   },
@@ -68,6 +73,7 @@
     "price": 75,
     "numLikes": 89,
     "description": "Enjoy wireless freedom and clear audio with these earbuds.",
+    "tags": ["#WirelessEarbuds", "#AudioQuality", "#WirelessFreedom"],
     "numComments": 22,
     "liked": false
   },
@@ -80,6 +86,7 @@
     "price": 120,
     "numLikes": 57,
     "description": "Elevate your style with this elegant and timeless watch.",
+    "tags": ["#ClassicWatch", "#Timepiece", "#ElegantStyle"],
     "numComments": 14,
     "liked": true
   },
@@ -92,6 +99,7 @@
     "price": 150,
     "numLikes": 42,
     "description": "Immerse yourself in gaming with this high-quality wireless headset.",
+    "tags": ["#GamingHeadset", "#WirelessAudio", "#ImmersiveGaming"],
     "numComments": 10,
     "liked": false
   },
@@ -104,6 +112,7 @@
     "price": 55,
     "numLikes": 31,
     "description": "Enjoy your favorite music on the go with this compact speaker.",
+    "tags": ["#BluetoothSpeaker", "#PortableSound", "#MusicOnTheGo"],
     "numComments": 8,
     "liked": true
   },
@@ -116,6 +125,7 @@
     "price": 85,
     "numLikes": 76,
     "description": "Stay active and monitor your health with this versatile fitness tracker.",
+    "tags":  ["#FitnessTracker", "#HealthMonitoring", "#ActivityWatch"],
     "numComments": 15,
     "liked": false
   },
@@ -128,6 +138,7 @@
     "price": 25,
     "numLikes": 63,
     "description": "Conveniently charge your devices wirelessly with this charging pad.",
+    "tags":  ["#ChargingPad", "#WirelessCharging", "#ConvenientPower"],
     "numComments": 12,
     "liked": true
   },
@@ -140,6 +151,7 @@
     "price": 45,
     "numLikes": 38,
     "description": "Brew your favorite coffee with this stylish and efficient coffee maker.",
+    "tags": ["#CoffeeMaker", "#BrewingCoffee", "#KitchenAppliance"],
     "numComments": 9,
     "liked": false
   },
@@ -152,6 +164,7 @@
     "price": 60,
     "numLikes": 53,
     "description": "Pack your essentials and travel in style with this durable backpack.",
+    "tags":  ["#TravelBackpack", "#AdventureGear", "#PackAndGo"],
     "numComments": 18,
     "liked": true
   },
@@ -164,6 +177,7 @@
     "price": 95,
     "numLikes": 27,
     "description": "Control your smart devices with ease using this advanced home hub.",
+    "tags":  ["#SmartHomeHub", "#HomeAutomation", "#ConnectedDevices"],
     "numComments": 6,
     "liked": false
   },
@@ -176,6 +190,7 @@
     "price": 50,
     "numLikes": 48,
     "description": "Enhance your productivity with this wireless keyboard and mouse combo.",
+    "tags":  ["#WirelessKeyboard", "#WirelessMouse", "#ProductivityTools"],
     "numComments": 13,
     "liked": true
   }

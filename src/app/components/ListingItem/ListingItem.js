@@ -13,6 +13,7 @@ const ListingItem = ({
   price,
   numLikes,
   description,
+  tags,
   numComments,
   liked,
   onLikeClick,
@@ -85,6 +86,9 @@ const ListingItem = ({
           {"  " + numLikes + " likes"}
         </a>
         <span className={styles["description"]}>{description}</span>
+        <a className={styles["tags"]} href="#">
+          {tags.join(" ")}
+        </a>
         <a className={styles["comments"]} href="#">
           View {numComments} comments
         </a>

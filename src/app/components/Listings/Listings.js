@@ -18,9 +18,9 @@ const Listings = ({ data }) => {
           title={item.title}
           price={item.price}
           numLikes={item.numLikes}
-            description={item.description}
+          description={item.description}
           numComments={item.numComments}
-          liked={item.liked}
+          liked={true}
           onLikeClick={() => handleLikeClick(item.id)}
         />
       ))}

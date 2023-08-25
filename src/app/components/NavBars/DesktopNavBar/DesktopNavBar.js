@@ -9,9 +9,8 @@ import {
   faHeartCircleCheck,
   faHouseCircleCheck,
 } from "@fortawesome/free-solid-svg-icons";
-
-const DesktopNavBar = ({likedSelected, setLikedSelected}) => {
-
+import { faHeart as heartRegular } from "@fortawesome/free-regular-svg-icons";
+const DesktopNavBar = ({ likedSelected, setLikedSelected }) => {
   return (
     <nav className={styles["desktop-nav"]}>
       <div className={styles["nav-logo"]}>
@@ -39,7 +38,7 @@ const DesktopNavBar = ({likedSelected, setLikedSelected}) => {
           }}
         >
           <FontAwesomeIcon
-            icon={likedSelected ? faHeartCircleCheck : faHeart}
+            icon={likedSelected ? faHeartCircleCheck : heartRegular}
             style={{ color: "black", marginRight: "5px", fontSize: "1.1rem" }}
           />
           <span className={styles["nav-link-text"]}>Liked</span>

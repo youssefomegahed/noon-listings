@@ -19,7 +19,7 @@ const ListingItem = ({
 }) => {
   return (
     <div className={styles["listing-item"]}>
-      <div className={styles["user-info"]}>
+      <a className={styles["user-info"]} href="#">
         <div className={styles["profile-picture"]}>
           <Image
             src={profilePicture}
@@ -29,7 +29,7 @@ const ListingItem = ({
           />
         </div>
         <span className={styles["username"]}>{username}</span>
-      </div>
+      </a>
       <div className={styles["listing-image"]}>
         <Image
           src={image}
@@ -44,7 +44,9 @@ const ListingItem = ({
           }}
         />
         <div className={styles["title-container"]}>
-          <h2 className={styles["listing-title"]}>{title}</h2>
+          <a href="#">
+            <h2 className={styles["listing-title"]}>{title}</h2>
+          </a>
           <button
             className={styles["like-button"]}
             onClick={onLikeClick}
@@ -60,7 +62,7 @@ const ListingItem = ({
       </div>
       <div className={styles["listing-details"]}>
         <span className={styles["price"]}>${price}</span>
-        <span className={styles["likes"]}>
+        <a className={styles["likes"]} href="#">
           <button
             className={styles["like-button"]}
             onClick={onLikeClick}
@@ -72,9 +74,11 @@ const ListingItem = ({
             <FontAwesomeIcon icon={liked ? solidHeart : faHeart} />
           </button>{" "}
           {"  " + numLikes + " likes"}
-        </span>
+        </a>
         <span className={styles["description"]}>{description}</span>
-        <span className={styles["comments"]}>View {numComments} comments</span>
+        <a className={styles["comments"]} href="#">
+          View {numComments} comments
+        </a>
       </div>
     </div>
   );

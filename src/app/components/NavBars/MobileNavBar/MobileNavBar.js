@@ -8,6 +8,7 @@ import {
   faHouseCircleCheck,
 } from "@fortawesome/free-solid-svg-icons";
 import styles from "./mobileNavBar.module.scss";
+import { faHeart as heartRegular } from "@fortawesome/free-regular-svg-icons";
 
 const MobileNavBar = ({ likedSelected, setLikedSelected }) => {
   return (
@@ -27,7 +28,7 @@ const MobileNavBar = ({ likedSelected, setLikedSelected }) => {
       </Link>
       <Link href={"/"} className={styles["nav-link"]}>
         <FontAwesomeIcon
-          icon={likedSelected ? faHeartCircleCheck : faHeart}
+          icon={likedSelected ? faHeartCircleCheck : heartRegular}
           className={styles["nav-icon"]}
           style={{ color: "black" }}
           onClick={() => {

@@ -11,6 +11,7 @@ export default function Home() {
   const [isMobile, setIsMobile] = React.useState(false);
   const [likedSelected, setLikedSelected] = React.useState(false);
   const [data, setData] = React.useState([]);
+  const [likedListings, setLikedListings] = React.useState([]);
 
   // every time the width changes, check if it is mobile or not
   React.useEffect(() => {
@@ -30,6 +31,18 @@ export default function Home() {
 
   React.useEffect(() => {
     setData(listingsData);
+  }, []);
+
+  React.useEffect(() => {
+    let tmpLikedListings = localStorage.getItem("likedListings") || [];
+
+    if (tmpLikedListings.length > 0) {
+      tmpLikedListings = JSON.parse(tmpLikedListings);
+    }
+
+
+
+    setLikedListings(tmpLikedListings);
   }, []);
 
   return (
@@ -59,7 +72,7 @@ export default function Home() {
           overflow: "auto", // Enable scrolling when needed
         }}
       >
-        <Listings data={data} />
+        <Listings data={data} setLikedListings={setLikedListings} likedListings={likedListings} />
       </div>
     </div>
   );

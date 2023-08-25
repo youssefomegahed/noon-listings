@@ -56,7 +56,10 @@ const ListingItem = ({
               marginRight: 5,
             }}
           >
-            <FontAwesomeIcon icon={liked ? solidHeart : faHeart} />
+            <FontAwesomeIcon
+              icon={liked ? solidHeart : faHeart}
+              color={"#82ae04"}
+            />
           </button>
         </div>
       </div>
@@ -71,7 +74,13 @@ const ListingItem = ({
               fontSize: 14,
             }}
           >
-            <FontAwesomeIcon icon={liked ? solidHeart : faHeart} />
+            <FontAwesomeIcon
+              icon={liked ? solidHeart : faHeart}
+              color={"#82ae04"}
+              style={{
+                marginTop: 5,
+              }}
+            />
           </button>{" "}
           {"  " + numLikes + " likes"}
         </a>

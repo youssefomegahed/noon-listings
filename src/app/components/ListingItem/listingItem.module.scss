@@ -23,8 +23,8 @@
 }
 
 .username {
-  font-weight: bold;
-  color: black;
+  color: #82ae04;
+  margin-bottom: 3px;
 }
 
 .listing-image {
@@ -74,9 +74,11 @@
 .comments {
   color: gray;
 }
-
+// rgb(70, 42, 197)
 .likes {
-  color: black;
+  color: #82ae04;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .description {

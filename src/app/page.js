@@ -17,7 +17,6 @@ export default function Home() {
   React.useEffect(() => {
     // set the width of the screen
     setWidth(window.screen.width);
-    console.log(window.screen.width);
 
     //
     window.addEventListener("resize", () => {

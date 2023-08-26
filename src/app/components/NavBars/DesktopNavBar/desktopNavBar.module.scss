@@ -19,10 +19,19 @@
   color: black;
   font-weight: bold;
   font-size: 16px;
-  transition: color 0.3s ease-in-out;
   padding: 5px 10px;
+}
+
+.icon-text-wrapper {
+  display: flex;
+  align-items: center;
 }
 
 .nav-link-text {
   font-size: 16x;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
 }

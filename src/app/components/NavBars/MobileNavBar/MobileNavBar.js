@@ -1,15 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHome,
-  faHeart,
-  faHeartCircleCheck,
-  faHouseCircleCheck,
-} from "@fortawesome/free-solid-svg-icons";
 import styles from "./mobileNavBar.module.scss";
-import { faHeart as heartRegular } from "@fortawesome/free-regular-svg-icons";
-
+import {
+  AiFillHome,
+  AiOutlineHome,
+  AiFillHeart,
+  AiOutlineHeart,
+} from "react-icons/ai";
 const MobileNavBar = ({ likedSelected, setLikedSelected }) => {
   return (
     <nav className={styles["mobile-nav"]}>
@@ -20,21 +17,48 @@ const MobileNavBar = ({ likedSelected, setLikedSelected }) => {
           setLikedSelected(false);
         }}
       >
-        <FontAwesomeIcon
-          icon={likedSelected ? faHome : faHouseCircleCheck}
-          className={styles["nav-icon"]}
-          style={{ color: "black" }}
-        />
+        {likedSelected ? (
+          <AiOutlineHome
+            style={{
+              color: "black",
+              marginRight: "5px",
+              fontSize: "1.5rem",
+            }}
+          />
+        ) : (
+          <AiFillHome
+            style={{
+              color: "black",
+              marginRight: "5px",
+              fontSize: "1.5rem",
+            }}
+          />
+        )}
       </Link>
-      <Link href={"/"} className={styles["nav-link"]}>
-        <FontAwesomeIcon
-          icon={likedSelected ? faHeartCircleCheck : heartRegular}
-          className={styles["nav-icon"]}
-          style={{ color: "black" }}
-          onClick={() => {
-            setLikedSelected(true);
-          }}
-        />
+      <Link
+        href={"/"}
+        className={styles["nav-link"]}
+        onClick={() => {
+          setLikedSelected(true);
+        }}
+      >
+        {likedSelected ? (
+          <AiFillHeart
+            style={{
+              color: "black",
+              marginRight: "5px",
+              fontSize: "1.5rem",
+            }}
+          />
+        ) : (
+          <AiOutlineHeart
+            style={{
+              color: "black",
+              marginRight: "5px",
+              fontSize: "1.5rem",
+            }}
+          />
+        )}
       </Link>
     </nav>
   );

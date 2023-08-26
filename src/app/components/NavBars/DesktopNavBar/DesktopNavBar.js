@@ -2,14 +2,12 @@ import React from "react";
 import Link from "next/link";
 import styles from "./desktopNavBar.module.scss";
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faHome,
-  faHeart,
-  faHeartCircleCheck,
-  faHouseCircleCheck,
-} from "@fortawesome/free-solid-svg-icons";
-import { faHeart as heartRegular } from "@fortawesome/free-regular-svg-icons";
+  AiFillHome,
+  AiOutlineHome,
+  AiFillHeart,
+  AiOutlineHeart,
+} from "react-icons/ai";
 const DesktopNavBar = ({ likedSelected, setLikedSelected }) => {
   return (
     <nav className={styles["desktop-nav"]}>
@@ -24,11 +22,26 @@ const DesktopNavBar = ({ likedSelected, setLikedSelected }) => {
             setLikedSelected(false);
           }}
         >
-          <FontAwesomeIcon
-            icon={likedSelected ? faHome : faHouseCircleCheck}
-            style={{ color: "black", marginRight: "5px", fontSize: "1.1rem" }}
-          />
-          <span className={styles["nav-link-text"]}>Home</span>
+          <div className={styles["icon-text-wrapper"]}>
+            {likedSelected ? (
+              <AiOutlineHome
+                style={{
+                  color: "black",
+                  marginRight: "5px",
+                  fontSize: "1.5rem",
+                }}
+              />
+            ) : (
+              <AiFillHome
+                style={{
+                  color: "black",
+                  marginRight: "5px",
+                  fontSize: "1.5rem",
+                }}
+              />
+            )}
+            <span className={styles["nav-link-text"]}>Home</span>
+          </div>
         </Link>
         <Link
           href={"/"}
@@ -37,11 +50,26 @@ const DesktopNavBar = ({ likedSelected, setLikedSelected }) => {
             setLikedSelected(true);
           }}
         >
-          <FontAwesomeIcon
-            icon={likedSelected ? faHeartCircleCheck : heartRegular}
-            style={{ color: "black", marginRight: "5px", fontSize: "1.1rem" }}
-          />
-          <span className={styles["nav-link-text"]}>Liked</span>
+          <div className={styles["icon-text-wrapper"]}>
+            {likedSelected ? (
+              <AiFillHeart
+                style={{
+                  color: "black",
+                  marginRight: "5px",
+                  fontSize: "1.5rem",
+                }}
+              />
+            ) : (
+              <AiOutlineHeart
+                style={{
+                  color: "black",
+                  marginRight: "5px",
+                  fontSize: "1.5rem",
+                }}
+              />
+            )}
+            <span className={styles["nav-link-text"]}>Liked</span>
+          </div>
         </Link>
       </div>
     </nav>

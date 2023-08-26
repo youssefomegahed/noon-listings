@@ -8,6 +8,7 @@ import {
   AiFillHeart,
   AiOutlineHeart,
 } from "react-icons/ai";
+
 const DesktopNavBar = ({ likedSelected, setLikedSelected }) => {
   return (
     <nav className={styles["desktop-nav"]}>

@@ -4,36 +4,26 @@ import React from "react";
 import MobileNavBar from "./components/NavBars/MobileNavBar/MobileNavBar";
 import DesktopNavBar from "./components/NavBars/DesktopNavBar/DesktopNavBar";
 import Listings from "./components/Listings/Listings";
-import listingsData from "./data/listings";
+import listingsData from "./data/listings"; // simulates getting data from an API
 
 export default function Home() {
   const [width, setWidth] = React.useState(window.screen.width);
   const [isMobile, setIsMobile] = React.useState(false);
-  const [likedSelected, setLikedSelected] = React.useState(false);
-  const [data, setData] = React.useState([]);
+  const [likedSelected, setLikedSelected] = React.useState(false); // state to keep track of whether the liked tab is selected or not
+  const [data, setData] = React.useState([]); // listings data
   const [likedListingsIDs, setLikedListingsIDs] = React.useState([]);
 
-  // every time the width changes, check if it is mobile or not
+  // on page load
   React.useEffect(() => {
-    if (width < 1024) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  }, [width]);
-
-  // event listener for window to check for resize
-  React.useEffect(() => {
+    // set the width of the screen
     window.addEventListener("resize", () => {
       setWidth(window.screen.width);
     });
-  }, []);
 
-  React.useEffect(() => {
+    // get the listings data from the ./data/listings.js file and set it to the data state
     setData(listingsData);
-  }, []);
 
-  React.useEffect(() => {
+    // get the liked listings from local storage (if any) and set it to the likedListingsIDs state
     let tmpLikedListingsIDs = localStorage.getItem("likedListings") || [];
 
     if (tmpLikedListingsIDs.length > 0) {
@@ -42,6 +32,15 @@ export default function Home() {
 
     setLikedListingsIDs(tmpLikedListingsIDs);
   }, []);
+
+  // every time the width changes, check if it is mobile size or not
+  React.useEffect(() => {
+    if (width < 1024) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }, [width]);
 
   return (
     <div
@@ -75,10 +74,11 @@ export default function Home() {
           data={
             likedSelected
               ? data.filter((item) => likedListingsIDs.includes(item.id))
-              : data
+              : data // if likedSelected is false, show all listings, otherwise show liked listings
           }
           setLikedListingsIDs={setLikedListingsIDs}
           likedListingsIDs={likedListingsIDs}
+          likedSelected={likedSelected}
         />
       </div>
     </div>

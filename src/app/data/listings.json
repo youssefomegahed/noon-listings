@@ -125,7 +125,7 @@
     "price": 85,
     "numLikes": 76,
     "description": "Stay active and monitor your health with this versatile fitness tracker.",
-    "tags":  ["#FitnessTracker", "#HealthMonitoring", "#ActivityWatch"],
+    "tags": ["#FitnessTracker", "#HealthMonitoring", "#ActivityWatch"],
     "numComments": 15,
     "liked": false
   },
@@ -138,7 +138,7 @@
     "price": 25,
     "numLikes": 63,
     "description": "Conveniently charge your devices wirelessly with this charging pad.",
-    "tags":  ["#ChargingPad", "#WirelessCharging", "#ConvenientPower"],
+    "tags": ["#ChargingPad", "#WirelessCharging", "#ConvenientPower"],
     "numComments": 12,
     "liked": true
   },
@@ -164,7 +164,7 @@
     "price": 60,
     "numLikes": 53,
     "description": "Pack your essentials and travel in style with this durable backpack.",
-    "tags":  ["#TravelBackpack", "#AdventureGear", "#PackAndGo"],
+    "tags": ["#TravelBackpack", "#AdventureGear", "#PackAndGo"],
     "numComments": 18,
     "liked": true
   },
@@ -177,7 +177,7 @@
     "price": 95,
     "numLikes": 27,
     "description": "Control your smart devices with ease using this advanced home hub.",
-    "tags":  ["#SmartHomeHub", "#HomeAutomation", "#ConnectedDevices"],
+    "tags": ["#SmartHomeHub", "#HomeAutomation", "#ConnectedDevices"],
     "numComments": 6,
     "liked": false
   },
@@ -190,7 +190,7 @@
     "price": 50,
     "numLikes": 48,
     "description": "Enhance your productivity with this wireless keyboard and mouse combo.",
-    "tags":  ["#WirelessKeyboard", "#WirelessMouse", "#ProductivityTools"],
+    "tags": ["#WirelessKeyboard", "#WirelessMouse", "#ProductivityTools"],
     "numComments": 13,
     "liked": true
   }

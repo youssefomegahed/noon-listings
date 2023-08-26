@@ -7,7 +7,7 @@ import Listings from "./components/Listings/Listings";
 import listingsData from "./data/listings"; // simulates getting data from an API
 
 export default function Home() {
-  const [width, setWidth] = React.useState(window.screen.width);
+  const [width, setWidth] = React.useState(window ? window.screen.width : null); // sometimes window is undefined. Added conditional statement to avoid potential errors.
   const [isMobile, setIsMobile] = React.useState(false);
   const [likedSelected, setLikedSelected] = React.useState(false); // state to keep track of whether the liked tab is selected or not
   const [data, setData] = React.useState([]); // listings data
@@ -16,6 +16,9 @@ export default function Home() {
   // on page load
   React.useEffect(() => {
     // set the width of the screen
+    setWidth(window.screen.width);
+
+    // 
     window.addEventListener("resize", () => {
       setWidth(window.screen.width);
     });
